@@ -68,10 +68,11 @@ export default function LandingPage() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <div
-              className="relative"
+            <Link href="#home"
+              className="relative flex space-x-2"
               onMouseEnter={() => isClient && setTeacupHover(true)}
               onMouseLeave={() => isClient && setTeacupHover(false)}
+              
             >
               {isClient && (
                 <motion.div
@@ -93,10 +94,14 @@ export default function LandingPage() {
                 animate={isClient && teacupHover ? { rotate: [0, 5, -5, 0] } : { rotate: 0 }}
                 transition={{ duration: 0.5 }}
               >
+             
                 <Coffee className="h-6 w-6 text-primary" />
+    
+                
               </motion.div>
-            </div>
-            <span className="text-xl font-bold text-primary">equiTeee</span>
+              <span className="text-xl font-bold text-primary">equiTeee</span>
+            </Link>
+           
           </motion.div>
           <nav className="hidden md:flex items-center gap-6">
             <Link href="#what-is" className="text-sm font-medium hover:text-primary transition-colors">
@@ -110,7 +115,7 @@ export default function LandingPage() {
             </Link>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button asChild>
-                <Link href="#sign-up">Join equiTeee</Link>
+                <Link href="/login">Join equiTeee</Link>
               </Button>
             </motion.div>
           </nav>
@@ -178,6 +183,7 @@ export default function LandingPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section
+          id="home"
           ref={heroRef}
           className="relative overflow-hidden bg-gradient-to-br from-[#e8f5e9] via-white to-[#fff8e1] py-20 md:py-32"
         >
@@ -1123,4 +1129,5 @@ export default function LandingPage() {
     </div>
   )
 }
+
 

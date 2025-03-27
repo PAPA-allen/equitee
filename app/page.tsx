@@ -78,7 +78,7 @@ export default function LandingPage() {
                 <motion.div
                   animate={teacupHover ? { y: [-2, 2, -2], opacity: 1 } : { opacity: 0 }}
                   transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
-                  className="absolute -top-3 left-1/2 transform -translate-x-1/2"
+                  className="absolute -top-3 left-2 transform -translate-x-1/6"
                 >
                   <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
